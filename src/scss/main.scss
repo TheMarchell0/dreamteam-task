@@ -1,0 +1,23 @@
+//Normalize styles
+@import 'vendor';
+
+//Fonts
+@import 'fonts';
+
+//CSS variables
+@import 'vars';
+
+//Main styles
+* {
+  font-family: 'Ubuntu';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//Blocks
+
+@import './blocks/header';
+@import './blocks/mainBlock';
+@import './blocks/modal';
+@import './blocks/otherTours';
