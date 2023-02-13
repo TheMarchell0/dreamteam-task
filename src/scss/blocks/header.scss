@@ -2,11 +2,23 @@
   display: flex;
   justify-content: center;
 
+  @media (max-width: $tablet) {
+    height: 160px;
+  }
+
   &__img {
     width: 100%;
 
+    @media (max-width: $tablet) {
+      height: 100%;
+    }
+
     & img {
       width: inherit;
+
+      @media (max-width: $tablet) {
+        height: 100%;
+      }
     }
 
     @media (min-width: 1440px) {

@@ -15,12 +15,15 @@ const mainSlider = new Swiper(".js-main-slider", {
     prevEl: ".main-slider__navigation-prev",
   },
   breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 24,
+    },
     767: {
-      slidesPerView: 2.5,
+      slidesPerView: 2,
       spaceBetween: 20,
     },
-
-    1280: {
+    1024: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
@@ -47,13 +50,23 @@ function initToursSlider() {
     otherToursSlider = new Swiper(".js-other-tours-slider", {
       loop: false,
       spaceBetween: 24,
-      slidesPerView: 1.2,
+      slidesPerView: 2.1,
       allowTouchMove: false,
 
       // Navigation arrows
       navigation: {
         nextEl: ".other-tours__list-navigation-next",
         prevEl: ".other-tours__list-navigation-prev",
+      },
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1.2,
+          spaceBetween: 24,
+        },
+        767: {
+          slidesPerView: 2.1,
+        },
       },
     });
   } else if (innerWidth > 1024 && otherToursSlider) {

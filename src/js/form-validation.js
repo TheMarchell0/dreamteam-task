@@ -8,12 +8,11 @@ for (let input of inputs) {
   input.addEventListener("blur", () => {
     if (!input.value.trim().length) {
       input.value = input.value.trim();
-      wrapper.classList.add("modal__input-wrapper_error");
+      addError(wrapper);
       return;
     }
     if (input.value.trim().length && inputType === "name") {
-      wrapper.classList.remove("modal__input-wrapper_error");
-      wrapper.classList.add("modal__input-wrapper_success");
+      removeError(wrapper);
       return;
     }
 
@@ -22,7 +21,7 @@ for (let input of inputs) {
       inputType === "email" &&
       EMAIL_REGEXP.test(input.value) === false
     ) {
-      wrapper.classList.add("modal__input-wrapper_error");
+      addError(wrapper);
       return;
     }
 
@@ -31,8 +30,7 @@ for (let input of inputs) {
       inputType === "email" &&
       EMAIL_REGEXP.test(input.value) === true
     ) {
-      wrapper.classList.remove("modal__input-wrapper_error");
-      wrapper.classList.add("modal__input-wrapper_success");
+      removeError(wrapper);
       return;
     }
 
@@ -41,7 +39,7 @@ for (let input of inputs) {
       inputType === "phone" &&
       input.value.length < 17
     ) {
-      wrapper.classList.add("modal__input-wrapper_error");
+      addError(wrapper);
       return;
     }
 
@@ -50,11 +48,20 @@ for (let input of inputs) {
       inputType === "phone" &&
       input.value.length === 17
     ) {
-      wrapper.classList.remove("modal__input-wrapper_error");
-      wrapper.classList.add("modal__input-wrapper_success");
+      removeError(wrapper);
       return;
     }
   });
+}
+
+function addError(block) {
+  block.classList.add("modal__input-wrapper_error");
+  block.classList.remove("modal__input-wrapper_success");
+}
+
+function removeError(block) {
+  block.classList.remove("modal__input-wrapper_error");
+  block.classList.add("modal__input-wrapper_success");
 }
 
 [].forEach.call(document.querySelectorAll(".js-phone"), function (input) {

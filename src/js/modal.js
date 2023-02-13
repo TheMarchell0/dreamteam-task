@@ -4,8 +4,9 @@ const modalContent = modal.querySelector(".modal__inner");
 const modalContentHeight = modalContent.offsetHeight;
 const modalButtons = modal.querySelectorAll("button");
 const modalCloseButton = modal.querySelector(".js-modal-close");
-const scrollWidth = window.innerWidth - document.body.scrollWidth;
+const scrollWidth = window.innerWidth - document.body.offsetWidth;
 const modalInputs = modal.querySelectorAll(".js-input-req");
+const modalSelect = modal.querySelector(".main-select");
 
 if (modalContentHeight > innerHeight) {
   modalContent.classList.add("modal_big");
@@ -60,4 +61,6 @@ function closeModal() {
     }
     modalInput.value = "";
   }
+  modalSelect.classList.remove("main-select_done");
+  modalSelect.querySelector(".main-select__choice").innerHTML = "Choose";
 }

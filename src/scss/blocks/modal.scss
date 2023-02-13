@@ -31,6 +31,11 @@
     font-size: 16px;
     line-height: 1.38;
     color: $textColor;
+
+    @media (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 
   &__close {
@@ -42,6 +47,10 @@
     border-radius: 50%;
     border: 1px solid #eaeaea;
     transition: 0.1s linear;
+
+    @media (max-width: $tablet) {
+      right: 18px;
+    }
 
     &::before {
       content: "";
@@ -68,10 +77,17 @@
     font-weight: 500;
     font-size: 32px;
     line-height: 38px;
+
+    @media (max-width: $tablet) {
+      font-size: 24px;
+      line-height: 28px;
+    }
   }
 
   &__label {
     color: $textColor;
+    font-size: 14px;
+    line-height: 22px;
   }
 
   &__input {
@@ -109,6 +125,10 @@
     width: 100%;
     padding: 65px 40px 63px;
     position: relative;
+
+    @media (max-width: $tablet) {
+      padding: 47px 21px 47px;
+    }
   }
 
   &__inputs {
@@ -123,6 +143,10 @@
       grid-template-rows: repeat(1, 1fr);
     }
 
+    @media (max-width: $tablet) {
+      margin-top: 44px;
+    }
+
     &-item {
       display: flex;
       flex-direction: column;
@@ -130,6 +154,10 @@
 
     &-label {
       margin-bottom: 19px;
+
+      @media (max-width: $tablet) {
+        margin-bottom: 15px;
+      }
     }
 
     &-input {
@@ -148,12 +176,26 @@
       justify-content: flex-start;
     }
 
+    @media (max-width: $tablet) {
+      margin: 18px 0 39px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     &-item {
       display: flex;
       margin-top: 20px;
 
       &:not(:last-child) {
         margin-right: 20px;
+
+        @media (max-width: $tablet) {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: $tablet) {
+        margin-top: 23px;
       }
     }
 
@@ -174,6 +216,14 @@
 
       @media (max-width: $desktop-low) {
         padding: 22px 40px 24px;
+      }
+
+      @media (max-width: $tablet) {
+        padding: 20px 64px;
+      }
+
+      @media (max-width: $phone-low) {
+        padding: 20px 46px;
       }
 
       &:hover {
@@ -200,6 +250,12 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 63px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 40px;
+    }
 
     &-checkbox {
       &-input:checked + .modal__footer-checkbox-text::before {
@@ -252,6 +308,11 @@
 
     &-button {
       max-width: 322px;
+
+      @media (max-width: $tablet) {
+        max-width: 100%;
+        margin-top: 45px;
+      }
     }
   }
 

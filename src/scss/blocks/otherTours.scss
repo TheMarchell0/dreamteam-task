@@ -1,6 +1,10 @@
 .other-tours {
   margin: 64px 0 102px;
 
+  @media (max-width: $tablet) {
+    margin: 64px 0 64px;
+  }
+
   &__title {
     margin-bottom: 76px;
   }
@@ -32,9 +36,13 @@
         max-width: 270px;
       }
 
-      /*@media (max-width: $laptop) {
+      @media (max-width: $laptop) {
         max-width: initial;
-      }*/
+      }
+
+      @media (max-width: $tablet) {
+        max-width: 264px;
+      }
 
       &:hover .other-tours__list-like {
         opacity: 1;
@@ -59,6 +67,10 @@
     &-img {
       width: 100%;
 
+      @media (max-width: $laptop) {
+        max-width: 270px;
+      }
+
       & img {
         width: 100%;
         transition: 0.3s linear;
@@ -73,6 +85,12 @@
         opacity: 1;
       }
     }
+
+    &-navigation {
+      @media (max-width: $tablet) {
+        margin: 24px auto 0;
+      }
+    }
   }
 
   &__text {
@@ -82,9 +100,18 @@
       line-height: 1.19;
       font-family: "Ubuntu-Medium";
       margin-top: 21px;
+      min-height: 61px;
 
       @media (max-width: $desktop-low) {
         font-size: 26px;
+      }
+
+      @media (max-width: $tablet) {
+        font-size: 20px;
+        line-height: 1.4;
+        min-height: 56px;
+        display: flex;
+        align-items: center;
       }
     }
 
@@ -93,6 +120,11 @@
       line-height: 1.38;
       color: $textColor;
       margin-top: 16px;
+
+      @media (max-width: $tablet) {
+        font-size: 14px;
+        line-height: 1.57;
+      }
     }
   }
 }

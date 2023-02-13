@@ -38,8 +38,12 @@ body {
   margin: 0 auto;
   position: relative;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $laptop) {
     max-width: 940px;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 0 21px;
   }
 }
 
@@ -53,21 +57,48 @@ h2 {
 .main-select {
   background-color: $mainWhite;
   border: 1px solid #eaeaea;
-  padding: 20px 17px 12px 23px;
+  padding: 20px 22px;
   transition: 0.1s linear;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  &_done {
-    border: 1px solid $inputDone;
-    & .main-select__button-choice {
-      background: $inputDone;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #eaeaea;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    background: url("/images/select-arrow.svg") no-repeat center;
+    background-size: 13px;
+
+    @media (max-width: $tablet) {
       width: 24px;
       height: 24px;
+      right: 22px;
+      background-size: 10px 6px;
+    }
+  }
 
-      &::before {
-        background: url("/images/check-white.svg") no-repeat center;
+  &_done {
+    border: 1px solid $inputDone;
+    &:before {
+      width: 24px;
+      height: 24px;
+      right: 18px;
+      background-color: $inputDone;
+      background-image: url("/images/check-white.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @media (max-width: $tablet) {
+        background-size: 11px 10px;
+        right: 24px;
       }
     }
 
@@ -81,11 +112,11 @@ h2 {
     border: 1px solid #659dbd;
   }
 
-  &_active .main-select__button-choice {
+  &_active::before {
     border: 1px solid $mainBlue;
-
-    &::before {
-      background: url("/images/select-arrow-active.svg") no-repeat center;
+    background: url("/images/select-arrow-active.svg") no-repeat center;
+    @media (max-width: $tablet) {
+      background-size: 9px 5px;
     }
   }
 
@@ -98,25 +129,10 @@ h2 {
     font-size: 16px;
     line-height: 1.38;
     color: rgba(35, 35, 35, 0.4);
-  }
 
-  &__button-choice {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid #eaeaea;
-    position: relative;
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: url("/images/select-arrow.svg") no-repeat center;
-      width: 13px;
-      height: 13px;
+    @media (max-width: $tablet) {
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 
@@ -157,6 +173,10 @@ h2 {
     height: 0;
     padding: 1px 0 12px;
 
+    @media (max-width: $tablet) {
+      padding: 1px 0 4px;
+    }
+
     &::-webkit-scrollbar {
       width: 4px;
       background-color: $mainBlue;
@@ -172,6 +192,13 @@ h2 {
       font-size: 16px;
       line-height: 1.38;
       transition: 0.1s linear;
+
+      @media (max-width: $tablet) {
+        padding: 11px 23px 9px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.57;
+      }
 
       &:hover {
         background: #eaeaea;
@@ -196,6 +223,11 @@ h2 {
   z-index: 2;
   top: 16px;
   right: 16px;
+
+  @media (max-width: $tablet) {
+    top: 7px;
+    right: 7px;
+  }
 
   &::after {
     content: "";
@@ -297,6 +329,10 @@ h2 {
   justify-content: space-between;
   margin: 29px auto 0;
   max-width: 112px;
+
+  @media (max-width: $tablet) {
+    margin: 19px auto 0;
+  }
 }
 
 .blocked {
