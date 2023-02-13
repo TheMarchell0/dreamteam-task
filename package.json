@@ -34,6 +34,7 @@
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
     "imagemin-webpack": "^5.1.1",
+    "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "postcss": "^8.4.21",

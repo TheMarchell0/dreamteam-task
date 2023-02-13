@@ -1,28 +1,426 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <title>Walking in Old Tallinn page</title>
-</head>
-<body>
-<main>
-    <h1 class="visually-hidden">Тестовое задание для Дримтим</h1>
-    <p>Welcome to Old Tallinn, the heart of the Estonian capital!
-        The history of the settlement once began from here, and today it is one of the best preserved medieval cities in Europe.</p>
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+  </head>
+  <body>
+    <header class="header">
+      <picture class="header__img">
+        <source
+          srcset="./images/header-img.png 1x, ./images/header-img@2x.png 2x"
+        />
+        <img
+          src="./images/header-img.png"
+          srcset="./images/header-img.png 1x, ./images/header-img@2x.png 2x"
+          alt="Header image #1"
+        />
+      </picture>
+    </header>
+    <main>
+      <section class="main">
+        <h1 class="visually-hidden">Тестовое задание для Дримтим</h1>
+        <div class="main__container container">
+          <div class="main__head">
+            <custom-title
+              class="main__head-title"
+              text="Walking in Old Tallinn"
+            ></custom-title>
+            <button class="main__head-button core-button js-modal-button">
+              Feedback
+            </button>
+          </div>
+          <div class="main__content">
+            <p class="main__content-text">
+              Welcome to Old Tallinn, the heart of the Estonian capital! The
+              history of the settlement once began from here, and today it is
+              one of the best preserved medieval cities in Europe.
+            </p>
+            <p class="main__content-text">
+              I will take you through the streets and doorways and show you
+              where they traded, what they ate, what they sued about and what
+              our Estonian ancestors aspired to.
+            </p>
+            <p class="main__content-text">
+              You will visit the oldest pharmacy, get acquainted with the royal
+              privileges, see firsthand a real "gingerbread" house, look into an
+              old tavern, walk along the widest and longest streets of the city
+              and even find out that Tallinn is a lame city!
+            </p>
+            <p class="main__content-text">
+              And you will also find beautiful and interesting souvenirs, of
+              course!
+            </p>
+          </div>
+          <div class="main__slider swiper js-main-slider">
+            <div class="main__slider-wrapper swiper-wrapper">
+              <div class="main__slider-item swiper-slide">
+                <picture class="main__slider-picture">
+                  <source
+                    srcset="
+                      ./images/main-slide-img1.png    1x,
+                      ./images/main-slide-img1@2x.png 2x
+                    "
+                  />
+                  <img
+                    src="./images/main-slide-img1.png"
+                    srcset="
+                      ./images/main-slide-img1.png    1x,
+                      ./images/main-slide-img1@2x.png 2x
+                    "
+                    alt="Main slide image #1"
+                  />
+                </picture>
+              </div>
+              <div class="main__slider-item swiper-slide">
+                <picture class="main__slider-picture">
+                  <source
+                    srcset="
+                      ./images/main-slide-img2.png    1x,
+                      ./images/main-slide-img2@2x.png 2x
+                    "
+                  />
+                  <img
+                    src="./images/main-slide-img2.png"
+                    srcset="
+                      ./images/main-slide-img2.png    1x,
+                      ./images/main-slide-img2@2x.png 2x
+                    "
+                    alt="Main slide image #2"
+                  />
+                </picture>
+              </div>
+              <div class="main__slider-item swiper-slide">
+                <picture class="main__slider-picture">
+                  <source
+                    srcset="
+                      ./images/main-slide-img3.png    1x,
+                      ./images/main-slide-img3@2x.png 2x
+                    "
+                  />
+                  <img
+                    src="./images/main-slide-img3.png"
+                    srcset="
+                      ./images/main-slide-img3.png    1x,
+                      ./images/main-slide-img3@2x.png 2x
+                    "
+                    alt="Main slide image #3"
+                  />
+                </picture>
+              </div>
+              <div class="main__slider-item swiper-slide">
+                <picture class="main__slider-picture">
+                  <source
+                    srcset="
+                      ./images/main-slide-img4.png    1x,
+                      ./images/main-slide-img4@2x.png 2x
+                    "
+                  />
+                  <img
+                    src="./images/main-slide-img4.png"
+                    srcset="
+                      ./images/main-slide-img4.png    1x,
+                      ./images/main-slide-img4@2x.png 2x
+                    "
+                    alt="Main slide image #4"
+                  />
+                </picture>
+              </div>
+              <div class="main__slider-item swiper-slide">
+                <picture class="main__slider-picture">
+                  <source
+                    srcset="
+                      ./images/main-slide-img5.png    1x,
+                      ./images/main-slide-img5@2x.png 2x
+                    "
+                  />
+                  <img
+                    src="./images/main-slide-img5.png"
+                    srcset="
+                      ./images/main-slide-img5.png    1x,
+                      ./images/main-slide-img5@2x.png 2x
+                    "
+                    alt="Main slide image #5"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="main-slider__navigation core-buttons-navigation">
+            <div class="main-slider__navigation-prev swiper-button-prev"></div>
+            <div class="main-slider__navigation-next swiper-button-next"></div>
+          </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+      </section>
+      <section class="other-tours">
+        <div class="other-tours__container container">
+          <custom-title
+            class="other-tours__title"
+            text="Other tours"
+          ></custom-title>
+          <div class="other-tours__list swiper js-other-tours-slider">
+            <div class="other-tours__list-wrapper swiper-wrapper">
+              <div class="other-tours__list-item swiper-slide">
+                <div class="other-tours__list-img">
+                  <input
+                    class="other-tours__list-like core-like"
+                    type="checkbox"
+                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/other-tours-img1.png    1x,
+                        ./images/other-tours-img1@2x.png 2x
+                      "
+                    />
+                    <img
+                      src="./images/other-tours-img1.png"
+                      srcset="
+                        ./images/other-tours-img1.png    1x,
+                        ./images/other-tours-img1@2x.png 2x
+                      "
+                      alt="Other tours slide image #1"
+                    />
+                  </picture>
+                </div>
+                <div class="other-tours__list-text other-tours__text">
+                  <p class="other-tours__text-title">
+                    St. Isaac's Cathedral in St. Petersburg
+                  </p>
+                  <p class="other-tours__text-descr">
+                    One of the highest domed structures in the world.
+                  </p>
+                </div>
+              </div>
+              <div class="other-tours__list-item swiper-slide">
+                <div class="other-tours__list-img">
+                  <input
+                    class="other-tours__list-like core-like"
+                    type="checkbox"
+                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/other-tours-img2.png    1x,
+                        ./images/other-tours-img2@2x.png 2x
+                      "
+                    />
+                    <img
+                      src="./images/other-tours-img2.png"
+                      srcset="
+                        ./images/other-tours-img2.png    1x,
+                        ./images/other-tours-img2@2x.png 2x
+                      "
+                      alt="Other tours slide image #2"
+                    />
+                  </picture>
+                </div>
+                <div class="other-tours__list-text other-tours__text">
+                  <p class="other-tours__text-title">
+                    The Bridge of Peace, Tbilisi
+                  </p>
+                  <p class="other-tours__text-descr">
+                    Arc-shaped pedestrian bridge made of glass and steel
+                  </p>
+                </div>
+              </div>
+              <div class="other-tours__list-item swiper-slide">
+                <div class="other-tours__list-img">
+                  <input
+                    class="other-tours__list-like core-like"
+                    type="checkbox"
+                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/other-tours-img3.png    1x,
+                        ./images/other-tours-img3@2x.png 2x
+                      "
+                    />
+                    <img
+                      src="./images/other-tours-img3.png"
+                      srcset="
+                        ./images/other-tours-img3.png    1x,
+                        ./images/other-tours-img3@2x.png 2x
+                      "
+                      alt="Other tours slide image #3"
+                    />
+                  </picture>
+                </div>
+                <div class="other-tours__list-text other-tours__text">
+                  <p class="other-tours__text-title">
+                    El Caminito del Rey, Argentina
+                  </p>
+                  <p class="other-tours__text-descr">
+                    Tango, Open-air Museum, Painting, Art and History
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="other-tours__list-navigation core-buttons-navigation">
+              <div
+                class="other-tours__list-navigation-prev swiper-button-prev"
+              ></div>
+              <div
+                class="other-tours__list-navigation-next swiper-button-next"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="js-modal" class="modal">
+      <div class="modal__inner">
+        <h2 class="modal__title">Feedback</h2>
+        <button class="modal__close js-modal-close"></button>
+        <form>
+          <ul class="modal__inputs">
+            <li class="modal__inputs-item">
+              <label class="modal__inputs-label modal__label" for="modal-name"
+                >Your name</label
+              >
+              <div class="modal__inputs-wrapper modal__input-wrapper">
+                <input
+                  class="modal__inputs-input modal__input js-input-req"
+                  id="modal-name"
+                  type="text"
+                  placeholder="Placeholder"
+                  data-type="name"
+                />
+              </div>
+            </li>
+            <li class="modal__inputs-item">
+              <label class="modal__inputs-label modal__label" for="modal-email"
+                >Email address</label
+              >
+              <div class="modal__inputs-wrapper modal__input-wrapper">
+                <input
+                  class="modal__inputs-input modal__input js-input-req"
+                  id="modal-email"
+                  type="email"
+                  placeholder="Placeholder"
+                  data-type="email"
+                />
+              </div>
+            </li>
+            <li class="modal__inputs-item">
+              <label class="modal__inputs-label modal__label" for="modal-phone"
+                >Your phone</label
+              >
+              <div class="modal__inputs-wrapper modal__input-wrapper">
+                <input
+                  class="modal__inputs-input modal__input js-input-req js-phone"
+                  id="modal-phone"
+                  type="text"
+                  placeholder="Placeholder"
+                  data-type="phone"
+                />
+              </div>
+            </li>
+            <li class="modal__inputs-item">
+              <p class="modal__inputs-label modal__label">Choose a trip</p>
+              <div class="main-select-menu">
+                <div class="main-select">
+                  <p class="main-select__choice">Choose</p>
+                  <button class="main-select__button-choice"></button>
+                </div>
+                <ul class="main-select__list">
+                  <li class="main-select__list-item">Walking in Old Tallinn</li>
+                  <li class="main-select__list-item">St. Isaac's Cathedral</li>
+                  <li class="main-select__list-item">The Bridge of Peace</li>
+                  <li class="main-select__list-item">El Caminito del Rey</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="modal__radio">
+            <li class="modal__radio-item">
+              <input
+                class="modal__radio-input visually-hidden"
+                name="modal-radio"
+                id="modal-radio-1"
+                type="radio"
+              />
+              <label
+                class="modal__radio-label modal__label"
+                for="modal-radio-1"
+              >
+                Reviews and suggestions
+              </label>
+            </li>
+            <li class="modal__radio-item">
+              <input
+                class="modal__radio-input visually-hidden"
+                name="modal-radio"
+                id="modal-radio-2"
+                type="radio"
+              />
+              <label
+                class="modal__radio-label modal__label"
+                for="modal-radio-2"
+              >
+                Question about content
+              </label>
+            </li>
+            <li class="modal__radio-item">
+              <input
+                class="modal__radio-input visually-hidden"
+                name="modal-radio"
+                id="modal-radio-3"
+                type="radio"
+              />
+              <label class="modal__radio-label modal__label" for="modal-radio-3"
+                >Complaints
+              </label>
+            </li>
+            <li class="modal__radio-item">
+              <input
+                class="modal__radio-input visually-hidden"
+                name="modal-radio"
+                id="modal-radio-4"
+                type="radio"
+              />
+              <label class="modal__radio-label modal__label" for="modal-radio-4"
+                >Other</label
+              >
+            </li>
+          </ul>
+          <div class="modal__textarea">
+            <p class="modal__textarea-title modal__label">
+              Describe your question
+            </p>
+            <textarea
+              class="modal__textarea-block modal__input"
+              placeholder="Placeholder"
+            ></textarea>
+          </div>
+          <div class="modal__footer">
+            <div class="modal__footer-checkbox">
+              <input
+                class="modal__footer-checkbox-input visually-hidden"
+                id="modal-footer-checkbox"
+                type="checkbox"
+              />
+              <label
+                class="modal__footer-checkbox-text modal__label"
+                for="modal-footer-checkbox"
+                >Даю согласие на обработку</label
+              >
+            </div>
+            <button class="modal__footer-button core-button">Send</button>
+          </div>
+        </form>
+      </div>
     </div>
-</main>
-</body>
+  </body>
 </html>

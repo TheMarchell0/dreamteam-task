@@ -1,0 +1,42 @@
+.main {
+  &__container {
+    padding-top: 62px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 63px;
+  }
+
+  &__content {
+    max-width: 586px;
+    width: 100%;
+
+    &-text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.33;
+      color: $textColor;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__slider {
+    margin-top: 64px;
+    width: 100vw;
+
+    &-item {
+      max-width: 313px;
+      width: 100%;
+
+      @media (max-width: 1439px) {
+        max-width: initial;
+      }
+    }
+  }
+}

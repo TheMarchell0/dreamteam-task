@@ -1,0 +1,98 @@
+.other-tours {
+  margin: 64px 0 102px;
+
+  &__title {
+    margin-bottom: 76px;
+  }
+
+  &__list {
+    margin: 0 auto;
+    max-width: 1122px;
+    overflow: visible;
+
+    &-navigation {
+      @media (min-width: $laptop) {
+        display: none;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-item {
+      max-width: 313px;
+      width: 100%;
+      transition: 0.5s ease-out;
+      cursor: pointer;
+
+      @media (max-width: $desktop-low) {
+        max-width: 270px;
+      }
+
+      /*@media (max-width: $laptop) {
+        max-width: initial;
+      }*/
+
+      &:hover .other-tours__list-like {
+        opacity: 1;
+      }
+
+      &:hover {
+        & img {
+          @media (min-width: $laptop) {
+            transform: scaleX(1.2) scaleY(1.1) translate(6px, -16px);
+          }
+        }
+
+        & .other-tours__list-like {
+          @media (min-width: $laptop) {
+            top: -14px;
+            right: -21px;
+          }
+        }
+      }
+    }
+
+    &-img {
+      width: 100%;
+
+      & img {
+        width: 100%;
+        transition: 0.3s linear;
+      }
+    }
+
+    &-like {
+      transition: 0.3s linear;
+      opacity: 0;
+
+      &:checked {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__text {
+    &-title {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 1.19;
+      font-family: "Ubuntu-Medium";
+      margin-top: 21px;
+
+      @media (max-width: $desktop-low) {
+        font-size: 26px;
+      }
+    }
+
+    &-descr {
+      font-size: 16px;
+      line-height: 1.38;
+      color: $textColor;
+      margin-top: 16px;
+    }
+  }
+}
